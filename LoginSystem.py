@@ -6,10 +6,10 @@ def main_acc():
     main_screen = Tk()
     main_screen.geometry("300x260")
     main_screen.title("Main")
-    Label(text="Click For Login", bg="#7b5cc7", fg="white",
+    Label(text="Login or Register", bg="#b1abf1", fg="white",
           width="300", height="2", font=("Calibri", 13)).pack(padx=20, pady=23 )
-    Button(text="LOGIN", height="2", width="15", fg="#7b5cc7",command=login).pack(padx=1, pady=20)
-    Button(text="REGISTER", height="2", width="15",fg="#7b5cc7", command=register).pack(padx=1, pady=5)
+    Button(text="LOGIN", height="2", width="15", fg="#b1abf1",command=login).pack(padx=1, pady=20)
+    Button(text="REGISTER", height="2", width="15",fg="#b1abf1", command=register).pack(padx=1, pady=5)
     main_screen.mainloop()
 
 ###
@@ -27,18 +27,24 @@ def register():
     username = StringVar()
     password = StringVar()
 
-    Label(register_screen, text="Please enter details below", bg="blue").pack()
+    Label(register_screen, text="Enter Details Below to Login!",bg="#D8BFD8", fg="white",
+          width="300", height="2",font=("Calibri", 13)).pack(padx=20, pady=23 )
     Label(register_screen, text="").pack()
-    username_lable = Label(register_screen, text="Username * ")
-    username_lable.pack()
-    username_entry = Entry(register_screen, textvariable=username)
-    username_entry.pack()
-    password_lable = Label(register_screen, text="Password * ")
-    password_lable.pack()
-    password_entry = Entry(register_screen, textvariable=password, show='*')
-    password_entry.pack()
+
+    unLabel = Label(register_screen, text="Username",fg="white", bg="#D8BFD8")
+    unLabel.pack()
+
+    unEntry = Entry(register_screen, textvariable=username)
+    unEntry.pack()
+
+    passLabel = Label(register_screen, text="Password",fg="white" , bg="#D8BFD8")
+    passLabel.pack()
+
+    passEntry = Entry(register_screen, textvariable=password, show='*')
+    passEntry.pack()
+
     Label(register_screen, text="").pack()
-    Button(register_screen, text="Register", width=10, height=1, bg="blue", command=register_user).pack()
+    Button(register_screen, text="Register", width=10, height=1, bg="#7b5cc7", command=register_user).pack()
 ##
 
 def login():
@@ -46,7 +52,7 @@ def login():
     login_screen = Toplevel(main_screen)
     login_screen.title("Login")
     login_screen.geometry("320x350")
-    Label(login_screen,text="Enter Details Below to Login!",bg="#7b5cc7", fg="white",
+    Label(login_screen,text="Enter Details Below to Login!",bg="#c0ecc0", fg="white",
           width="300", height="2",font=("Calibri", 13)).pack(padx=20, pady=23 )
     Label(login_screen, text="").pack()
 
@@ -59,17 +65,17 @@ def login():
     global username_login_entry
     global password_login_entry
 
-    Label(login_screen, text="Username",fg="white", bg="#7b5cc7").pack()
+    Label(login_screen, text="Username",fg="white", bg="#c0ecc0").pack()
     username_login_entry = Entry(login_screen, textvariable=username_verify)
     username_login_entry.pack()
 
     Label(login_screen, text="").pack()
-    Label(login_screen, text="Password",fg="white", bg="#7b5cc7").pack()
+    Label(login_screen, text="Password",fg="white", bg="#c0ecc0").pack()
     password_login_entry = Entry(login_screen, textvariable=password_verify, show='*')
     password_login_entry.pack()
 
     Label(login_screen, text="").pack()
-    Button(login_screen, text="Login", width=10, height=1, command=login_verify).pack()
+    Button(login_screen, text="Login",width=10, height=1, command=login_verify).pack()
 
 ##
 
