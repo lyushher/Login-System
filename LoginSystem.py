@@ -30,13 +30,13 @@ def register():
     Label(register_screen, text="").pack()
 
     unLabel = Label(register_screen, text="Username",fg="black", bg="#D8BFD8")
-    unLabel.pack()
+    unLabel.pack(pady=5)
 
     unEntry = Entry(register_screen, textvariable=username)
     unEntry.pack()
 
     passLabel = Label(register_screen, text="Password",fg="black" , bg="#D8BFD8")
-    passLabel.pack()
+    passLabel.pack(pady=5)
 
     passEntry = Entry(register_screen,textvariable=password, show='*')
     passEntry.pack()
@@ -64,13 +64,12 @@ def login():
 
     Label(login_screen, text="Username",fg="black", bg="#c0ecc0").pack()
     username_login_entry = Entry(login_screen, textvariable=username_verify)
-    username_login_entry.pack()
+    username_login_entry.pack(pady=5)
 
     Label(login_screen, text="").pack()
-    Label(login_screen, text="Password",fg="black", bg="#c0ecc0").pack()
+    Label(login_screen, text="Password",fg="black", bg="#c0ecc0").pack(pady=5)
 
-    password_login_entry = Entry(login_screen, textvariable=password_verify, show='*')
-    password_login_entry.pack()
+    password_login_entry = Entry(login_screen, textvariable=password_verify, show='*').pack()
 
     Label(login_screen, text="").pack()
     Button(login_screen, text="Login",width=10,fg="black" ,height=1, command=login_verify).pack()
