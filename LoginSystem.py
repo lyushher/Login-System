@@ -6,7 +6,7 @@ def main_acc():
     main_screen = Tk()
     main_screen.geometry("300x260")
     main_screen.title("Main")
-    Label(text="Login or Register", bg="#b1abf1", fg="black",
+    Label(text="Login or Register", bg="#b1abf1", fg="white",
           width="300", height="2", font=("Calibri", 13)).pack(padx=20, pady=23 )
     Button(text="LOGIN", height="2", width="15", fg="#c0ecc0",command=login).pack(padx=1, pady=20)
     Button(text="REGISTER", height="2", width="15",fg="#D8BFD8", command=register).pack(padx=1, pady=5)
