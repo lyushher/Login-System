@@ -2,6 +2,7 @@
 .Synopsis
 Activate a Python virtual environment for the current PowerShell session.
 
+
 .Description
 Pushes the python executable for a virtual environment to the front of the
 $Env:PATH environment variable and sets the prompt to signify that you are
